@@ -263,39 +263,29 @@ docker run -p 8000:8000 -p 8501:8501 foresight-crime-prediction
 
 ```
 foresight-crime-prediction/
-+-- src/
-�   +-- api/              # FastAPI application
-�   �   +-- main.py       # API endpoints
-�   �   +-- routers/      # API route modules
-�   +-- models/           # ML models
-�   �   +-- prophet_forecaster.py    # Prophet time-series model
-�   �   +-- dbscan_hotspots.py       # DBSCAN hotspot detection
-�   �   +-- route_optimizer.py        # Patrol route optimization
-�   +-- data/             # Data processing
-�   �   +-- etl.py        # ETL pipeline
-�   +-- utils/            # Utilities
-+-- tests/                # Test suite
-�   +-- test_etl.py
-�   +-- test_prophet.py
-�   +-- test_hotspots.py
-+-- notebooks/            # Jupyter notebooks
-+-- docs/                 # Documentation
-+-- streamlit_app.py     # Streamlit dashboard
-+-- requirements.txt     # Python dependencies
-+-- Dockerfile           # Docker configuration
-+-- pytest.ini           # Pytest configuration
-+-- README.md            # This file
+├── src/
+│   ├── api/              # FastAPI application
+│   │   ├── main.py       # API endpoints
+│   │   └── routers/      # API route modules
+│   ├── models/           # ML models
+│   │   ├── prophet_forecaster.py    # Prophet time-series model
+│   │   ├── dbscan_hotspots.py       # DBSCAN hotspot detection
+│   │   └── route_optimizer.py        # Patrol route optimization
+│   ├── data/             # Data processing
+│   │   └── etl.py        # ETL pipeline
+│   └── utils/            # Utilities
+├── tests/                # Test suite
+│   ├── test_etl.py
+│   ├── test_prophet.py
+│   └── test_hotspots.py
+├── notebooks/            # Jupyter notebooks
+├── docs/                 # Documentation
+├── streamlit_app.py     # Streamlit dashboard
+├── requirements.txt     # Python dependencies
+├── Dockerfile           # Docker configuration
+├── pytest.ini           # Pytest configuration
+└── README.md            # This file
 ```
-
----
-
-## API Endpoints
-
-### Forecast Endpoint
-
-Generate crime forecast for specified period:
-
-```bash
 POST /api/v1/forecast
 {
   "periods": 7,
