@@ -27,27 +27,16 @@
 
 ---
 
-## ?? Try Before You Clone
+## ðŸš€ Quick Start
 
-**Live Sandbox:** [demo.sentinel-analytics.dev/foresight](https://demo.sentinel-analytics.dev/foresight)
+**Local Setup:**
+- Clone the repository and follow the installation instructions below
+- All features are available when running locally
+- See [Quick Start](#quick-start) section for setup instructions
 
-**Pre-loaded Scenarios:**
-- 7-day crime forecast analysis
-- Hotspot detection and patrol optimization
-- Multi-agency intelligence fusion
-- Geospatial crime pattern visualization
-
-**Demo Features:**
-- Full UI access (no login required)
-- Sample datasets (anonymized)
-- All features enabled
-- Reset environment anytime
-
-**Feedback Loop:**
-- Rate features (thumbs up/down)
-- Submit feature requests
-- Report bugs
-- Share use cases
+**Demo:**
+- Interactive demo coming soon
+- For now, please use the local setup instructions to run the project
 
 ---
 
@@ -275,20 +264,20 @@ docker run -p 8000:8000 -p 8501:8501 foresight-crime-prediction
 ```
 foresight-crime-prediction/
 +-- src/
-¦   +-- api/              # FastAPI application
-¦   ¦   +-- main.py       # API endpoints
-¦   ¦   +-- routers/      # API route modules
-¦   +-- models/           # ML models
-¦   ¦   +-- prophet_forecaster.py    # Prophet time-series model
-¦   ¦   +-- dbscan_hotspots.py       # DBSCAN hotspot detection
-¦   ¦   +-- route_optimizer.py        # Patrol route optimization
-¦   +-- data/             # Data processing
-¦   ¦   +-- etl.py        # ETL pipeline
-¦   +-- utils/            # Utilities
+ï¿½   +-- api/              # FastAPI application
+ï¿½   ï¿½   +-- main.py       # API endpoints
+ï¿½   ï¿½   +-- routers/      # API route modules
+ï¿½   +-- models/           # ML models
+ï¿½   ï¿½   +-- prophet_forecaster.py    # Prophet time-series model
+ï¿½   ï¿½   +-- dbscan_hotspots.py       # DBSCAN hotspot detection
+ï¿½   ï¿½   +-- route_optimizer.py        # Patrol route optimization
+ï¿½   +-- data/             # Data processing
+ï¿½   ï¿½   +-- etl.py        # ETL pipeline
+ï¿½   +-- utils/            # Utilities
 +-- tests/                # Test suite
-¦   +-- test_etl.py
-¦   +-- test_prophet.py
-¦   +-- test_hotspots.py
+ï¿½   +-- test_etl.py
+ï¿½   +-- test_prophet.py
+ï¿½   +-- test_hotspots.py
 +-- notebooks/            # Jupyter notebooks
 +-- docs/                 # Documentation
 +-- streamlit_app.py     # Streamlit dashboard
