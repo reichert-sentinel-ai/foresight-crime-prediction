@@ -10,6 +10,15 @@ if (!rootElement) {
   throw new Error('Root element not found');
 }
 
+// Pre-enable dark theme to avoid initial flash
+if (typeof document !== 'undefined') {
+  const root = document.documentElement;
+  root.classList.add('dark');
+  document.body.classList.add('dark');
+  document.body.style.backgroundColor = '#0f0f0f';
+  document.body.style.color = '#e5e5e5';
+}
+
 try {
   ReactDOM.createRoot(rootElement).render(
     <ErrorBoundary>

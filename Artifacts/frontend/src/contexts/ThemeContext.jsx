@@ -24,10 +24,10 @@ export const ThemeProvider = ({ children }) => {
         }
       }
     } catch (e) {
-      // If localStorage fails, default to light
+      // If localStorage fails, default to dark
       console.warn('Theme initialization failed:', e);
     }
-    return 'light';
+    return 'dark';
   });
 
   useEffect(() => {
@@ -37,6 +37,7 @@ export const ThemeProvider = ({ children }) => {
       
       if (theme === 'dark') {
         root.classList.add('dark');
+        body.classList.add('dark');
         // Set CSS variables for dark theme
         root.style.setProperty('--app-bg', '#0f0f0f');
         root.style.setProperty('--nav-bg', '#1a1a1a');
@@ -45,6 +46,7 @@ export const ThemeProvider = ({ children }) => {
         body.style.color = '#e5e5e5';
       } else {
         root.classList.remove('dark');
+        body.classList.remove('dark');
         // Set CSS variables for light theme
         root.style.setProperty('--app-bg', '#f9fafb');
         root.style.setProperty('--nav-bg', '#ffffff');
