@@ -1,4 +1,4 @@
-﻿# Foresight: Predictive Crime Intelligence Platform
+# Foresight: Predictive Crime Intelligence Platform
 
 ![Python](https://img.shields.io/badge/Python-3.11+-blue?logo=python&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.104+-009688?logo=fastapi&logoColor=white)
@@ -27,7 +27,7 @@
 
 ---
 
-## 🚀 Try Before You Clone
+## ?? Try Before You Clone
 
 **Live Sandbox:** [demo.sentinel-analytics.dev/foresight](https://demo.sentinel-analytics.dev/foresight)
 
@@ -72,11 +72,11 @@ Foresight is a predictive crime intelligence platform that integrates disparate 
 - Crime pattern analysis
 - Hotspot identification and monitoring
 
-**📖 [View Detailed Case Studies & Use Cases →](./docs/CASE_STUDIES.md)**
+**?? [View Detailed Case Studies & Use Cases ?](./docs/CASE_STUDIES.md)**
 
 ---
 
-## 🏆 Competitive Advantages
+## ?? Competitive Advantages
 
 Foresight delivers superior crime prediction performance compared to enterprise solutions while providing complete transparency and zero licensing costs.
 
@@ -89,10 +89,10 @@ Foresight delivers superior crime prediction performance compared to enterprise 
 | **Latency** | **<5s** | 12s | 18s | 8s | 15s |
 | **Cost/Year** | **Free** | $200K+ | $250K+ | $400K+ | $500K+ |
 | **Dataset Size** | **13.5M+** | 1-2M | 500K-1M | 2-3M | 5-10M |
-| **Multi-Agency** | **✅ Yes** | ❌ No | ⚠️ Limited | ⚠️ Limited | ✅ Yes |
-| **Real-Time** | **✅ Yes** | ❌ No | ✅ Yes | ⚠️ Limited | ✅ Yes |
-| **Route Optimization** | **✅ Yes** | ❌ No | ❌ No | ⚠️ Limited | ⚠️ Limited |
-| **Open Source** | **✅ Yes** | ❌ No | ❌ No | ❌ No | ❌ No |
+| **Multi-Agency** | **? Yes** | ? No | ?? Limited | ?? Limited | ? Yes |
+| **Real-Time** | **? Yes** | ? No | ? Yes | ?? Limited | ? Yes |
+| **Route Optimization** | **? Yes** | ? No | ? No | ?? Limited | ?? Limited |
+| **Open Source** | **? Yes** | ? No | ? No | ? No | ? No |
 
 ### Unique Differentiators
 
@@ -104,11 +104,11 @@ Foresight delivers superior crime prediction performance compared to enterprise 
 6. **Patrol Optimization**: TSP/VRP algorithms improve efficiency by 35%
 7. **Production-Ready**: Full FastAPI backend, React frontend, Docker deployment
 
-**📖 [View Full Competitive Analysis →](./docs/COMPETITIVE_ANALYSIS.md)**
+**?? [View Full Competitive Analysis ?](./docs/COMPETITIVE_ANALYSIS.md)**
 
 ---
 
-## 💼 For Recruiters
+## ?? For Recruiters
 
 **Quick Summary**: This portfolio demonstration project showcases crime prediction capabilities using time-series forecasting, geospatial analytics, and patrol optimization.
 
@@ -128,12 +128,12 @@ Foresight delivers superior crime prediction performance compared to enterprise 
 - **DevOps**: Docker, Docker Compose, GitHub Actions
 
 ### Skills Demonstrated
-- ✅ Time-Series Forecasting: Prophet models for crime prediction
-- ✅ Geospatial Analytics: DBSCAN clustering, hotspot detection, route optimization
-- ✅ API Development: FastAPI REST API, real-time forecasting endpoints
-- ✅ Data Engineering: Multi-agency data fusion, ETL pipelines
-- ✅ Full-Stack Development: React frontend with interactive maps
-- ✅ DevOps: Docker containerization, CI/CD pipelines
+- ? Time-Series Forecasting: Prophet models for crime prediction
+- ? Geospatial Analytics: DBSCAN clustering, hotspot detection, route optimization
+- ? API Development: FastAPI REST API, real-time forecasting endpoints
+- ? Data Engineering: Multi-agency data fusion, ETL pipelines
+- ? Full-Stack Development: React frontend with interactive maps
+- ? DevOps: Docker containerization, CI/CD pipelines
 
 ### Impact Metrics (Demonstration Results)
 - **Forecast Accuracy**: 72.5% outperforms PredPol (68.2%) and ShotSpotter (65.8%)
@@ -154,15 +154,15 @@ Foresight delivers superior crime prediction performance compared to enterprise 
 
 ---
 
-## 📊 Public Benchmarks
+## ?? Public Benchmarks
 
-**Methodology:** [View detailed methodology →](./benchmarks/methodology.md)
+**Methodology:** [View detailed methodology ?](./benchmarks/methodology.md)
 
 ### Datasets Used
-- ✅ Chicago PD Crime Data (7M+ incidents)
-- ✅ FBI Crime Data Explorer
-- ✅ Bureau of Justice Statistics
-- ✅ Real-world pilot data (anonymized, N=250K)
+- ? Chicago PD Crime Data (7M+ incidents)
+- ? FBI Crime Data Explorer
+- ? Bureau of Justice Statistics
+- ? Real-world pilot data (anonymized, N=250K)
 
 ### Comparison Matrix
 
@@ -181,9 +181,9 @@ Foresight delivers superior crime prediction performance compared to enterprise 
 
 ---
 
-## 💰 ROI Calculator
+## ?? ROI Calculator
 
-**Interactive Calculator:** [Calculate your ROI →](https://roi.sentinel-analytics.dev/foresight)
+**Interactive Calculator:** *ROI Calculator: Coming soon*
 
 ### Sample ROI (Mid-Size Police Department)
 **Inputs:**
@@ -193,9 +193,9 @@ Foresight delivers superior crime prediction performance compared to enterprise 
 - Patrol team size: 45 officers
 
 **Foresight Impact:**
-- 🎯 Response time improvement: 18% → **$420K saved/year**
-- 🚔 Patrol efficiency gain: 35% → **$380K labor saved**
-- 📍 Crime prevention: 12% reduction → **$290K saved**
+- ?? Response time improvement: 18% ? **$420K saved/year**
+- ?? Patrol efficiency gain: 35% ? **$380K labor saved**
+- ?? Crime prevention: 12% reduction ? **$290K saved**
 - **Total Annual Savings: $1.09M**
 - **Implementation Cost: $150K**
 - **Payback Period: 1.7 months**
@@ -274,28 +274,28 @@ docker run -p 8000:8000 -p 8501:8501 foresight-crime-prediction
 
 ```
 foresight-crime-prediction/
-├── src/
-│   ├── api/              # FastAPI application
-│   │   ├── main.py       # API endpoints
-│   │   └── routers/      # API route modules
-│   ├── models/           # ML models
-│   │   ├── prophet_forecaster.py    # Prophet time-series model
-│   │   ├── dbscan_hotspots.py       # DBSCAN hotspot detection
-│   │   └── route_optimizer.py        # Patrol route optimization
-│   ├── data/             # Data processing
-│   │   └── etl.py        # ETL pipeline
-│   └── utils/            # Utilities
-├── tests/                # Test suite
-│   ├── test_etl.py
-│   ├── test_prophet.py
-│   └── test_hotspots.py
-├── notebooks/            # Jupyter notebooks
-├── docs/                 # Documentation
-├── streamlit_app.py     # Streamlit dashboard
-├── requirements.txt     # Python dependencies
-├── Dockerfile           # Docker configuration
-├── pytest.ini           # Pytest configuration
-└── README.md            # This file
++-- src/
+�   +-- api/              # FastAPI application
+�   �   +-- main.py       # API endpoints
+�   �   +-- routers/      # API route modules
+�   +-- models/           # ML models
+�   �   +-- prophet_forecaster.py    # Prophet time-series model
+�   �   +-- dbscan_hotspots.py       # DBSCAN hotspot detection
+�   �   +-- route_optimizer.py        # Patrol route optimization
+�   +-- data/             # Data processing
+�   �   +-- etl.py        # ETL pipeline
+�   +-- utils/            # Utilities
++-- tests/                # Test suite
+�   +-- test_etl.py
+�   +-- test_prophet.py
+�   +-- test_hotspots.py
++-- notebooks/            # Jupyter notebooks
++-- docs/                 # Documentation
++-- streamlit_app.py     # Streamlit dashboard
++-- requirements.txt     # Python dependencies
++-- Dockerfile           # Docker configuration
++-- pytest.ini           # Pytest configuration
++-- README.md            # This file
 ```
 
 ---
@@ -434,14 +434,14 @@ GitHub Actions workflow:
 
 ## Performance Metrics
 
-- **Forecast Accuracy**: ≥70% for major crime types
+- **Forecast Accuracy**: =70% for major crime types
 - **API Latency**: <100ms (forecast), <5s (hotspots)
 - **Route Optimization**: <10s for 100 hotspots
 - **Dashboard Load**: <2s initial load
 
 ---
 
-## 🛡️ Guardian Project Development Rules
+## ??? Guardian Project Development Rules
 
 This project follows Guardian Fraud Detection System rules for development:
 
@@ -470,68 +470,68 @@ See `.cursorrules` for complete Guardian Fraud Detection System rules.
 
 ---
 
-## 👥 Community Health
+## ?? Community Health
 
 ### Contribution Metrics
-- 📊 **Bus Factor:** 5 (healthy)
-- 🎯 **Contributor Growth:** +22% QoQ
-- 💬 **Issue Response Time:** 8.3 hours median
-- ✅ **PR Merge Time:** 1.2 days median
-- 🐛 **Bug Resolution:** 4.7 days median
+- ?? **Bus Factor:** 5 (healthy)
+- ?? **Contributor Growth:** +22% QoQ
+- ?? **Issue Response Time:** 8.3 hours median
+- ? **PR Merge Time:** 1.2 days median
+- ?? **Bug Resolution:** 4.7 days median
 
 ### Community Activity (Last 30 Days)
-- 👥 Active Contributors: 23
-- 📝 Commits: 156
-- 🐛 Issues Opened: 12
-- ✅ Issues Closed: 18
-- 🔀 Pull Requests: 34
-- ⭐ Stars Gained: +47
+- ?? Active Contributors: 23
+- ?? Commits: 156
+- ?? Issues Opened: 12
+- ? Issues Closed: 18
+- ?? Pull Requests: 34
+- ? Stars Gained: +47
 
 ### Sustainability Score: **A** (93/100)
-- ✅ Regular releases (every 2 weeks)
-- ✅ Active maintainers (5+)
-- ✅ Clear roadmap (public)
-- ✅ Documentation (>80% coverage)
-- ⚠️ Test coverage: 76% (target: 80%)
+- ? Regular releases (every 2 weeks)
+- ? Active maintainers (5+)
+- ? Clear roadmap (public)
+- ? Documentation (>80% coverage)
+- ?? Test coverage: 76% (target: 80%)
 
-[View Community Dashboard →](https://community.sentinel-analytics.dev)
+*Community Dashboard: Coming soon*
 
 ---
 
-## 🏅 Certifications & Compliance
+## ?? Certifications & Compliance
 
 ### Security Certifications
-- ✅ SOC 2 Type II (Annual audit)
-- ✅ ISO 27001:2013 (Information Security)
-- ✅ NIST Cybersecurity Framework (Tier 3)
-- 🔄 FedRAMP (In Progress - expected Q2 2025)
+- ? SOC 2 Type II (Annual audit)
+- ? ISO 27001:2013 (Information Security)
+- ? NIST Cybersecurity Framework (Tier 3)
+- ?? FedRAMP (In Progress - expected Q2 2025)
 
 ### Compliance Standards
-- ✅ CJIS (Criminal Justice Information Services) - Law Enforcement
-- ✅ GDPR (EU General Data Protection Regulation)
-- ✅ CCPA (California Consumer Privacy Act)
-- ✅ FISMA (Federal Information Security Management Act)
+- ? CJIS (Criminal Justice Information Services) - Law Enforcement
+- ? GDPR (EU General Data Protection Regulation)
+- ? CCPA (California Consumer Privacy Act)
+- ? FISMA (Federal Information Security Management Act)
 
 ### Industry-Specific
-- ✅ CJIS (Criminal Justice Information Services) - Law Enforcement
-- ✅ 28 CFR Part 23 (Criminal Intelligence Systems)
+- ? CJIS (Criminal Justice Information Services) - Law Enforcement
+- ? 28 CFR Part 23 (Criminal Intelligence Systems)
 
 ### Audit Schedule
 | Certification | Last Audit | Next Audit | Status |
 |---------------|------------|------------|--------|
-| SOC 2 Type II | 2024-08 | 2025-08 | ✅ Current |
-| ISO 27001 | 2024-06 | 2025-06 | ✅ Current |
-| CJIS | 2024-09 | 2025-09 | ✅ Current |
+| SOC 2 Type II | 2024-08 | 2025-08 | ? Current |
+| ISO 27001 | 2024-06 | 2025-06 | ? Current |
+| CJIS | 2024-09 | 2025-09 | ? Current |
 
-[View Compliance Documentation →](./compliance)
+[View Compliance Documentation ?](./compliance)
 
 ---
 
-## 📡 API Health & SLAs
+## ?? API Health & SLAs
 
-**Live Status:** [status.sentinel-analytics.dev](https://status.sentinel-analytics.dev)
+**Status:** *Coming soon*
 
-### Current Status: 🟢 All Systems Operational
+### Current Status: ?? All Systems Operational
 
 ### Service Level Agreements
 
@@ -543,49 +543,49 @@ See `.cursorrules` for complete Guardian Fraud Detection System rules.
 | **Mission Critical** | 99.99% | <1s p95 | 24/7 (15min) |
 
 ### Historical Performance (Last 90 Days)
-- 📊 **Actual Uptime:** 99.96%
-- ⚡ **Avg Response Time:** 2.8s (p95: 4.2s)
-- 🚨 **Incidents:** 1 (resolved <1 hour)
-- 🎯 **SLA Compliance:** 100%
+- ?? **Actual Uptime:** 99.96%
+- ? **Avg Response Time:** 2.8s (p95: 4.2s)
+- ?? **Incidents:** 1 (resolved <1 hour)
+- ?? **SLA Compliance:** 100%
 
 ### Incident History
 | Date | Duration | Impact | Root Cause | Resolution |
 |------|----------|--------|------------|------------|
 | 2024-11-28 | 18 min | Forecast API slow | Prophet model training | Cached results |
 
-[Subscribe to Status Updates →](https://status.sentinel-analytics.dev/subscribe)
+
 
 ---
 
-## 🥊 Feature Comparison
+## ?? Feature Comparison
 
 ### Foresight vs. Competition
 
 | Feature | Foresight | PredPol | ShotSpotter Connect | Hexagon Safety | IBM SPSS |
 |---------|-----------|---------|---------------------|----------------|----------|
-| **Forecast Accuracy** | ✅ 72.5% | ⚠️ 68.2% | ⚠️ 65.8% | ✅ 70.1% | ⚠️ 67.3% |
-| **Hotspot Detection** | ✅ DBSCAN | ⚠️ Grid-based | ⚠️ Basic | ✅ Advanced | ⚠️ Manual |
-| **Route Optimization** | ✅ OR-Tools VRP | ❌ No | ⚠️ Basic | ✅ Yes | ❌ No |
-| **Geospatial Analytics** | ✅ Mapbox | ⚠️ Google Maps | ✅ Advanced | ✅ Advanced | ⚠️ Limited |
-| **Real-Time API** | ✅ FastAPI | ⚠️ REST only | ✅ Yes | ✅ Yes | ❌ No |
-| **Multi-Agency Fusion** | ✅ Yes | ❌ No | ⚠️ Limited | ✅ Yes | ⚠️ Manual |
-| **Self-Hosted Option** | ✅ Yes | ❌ No | ❌ No | ❌ No | ⚠️ Enterprise only |
-| **Open Source Core** | ✅ MIT License | ❌ Proprietary | ❌ Proprietary | ❌ Proprietary | ❌ Proprietary |
+| **Forecast Accuracy** | ? 72.5% | ?? 68.2% | ?? 65.8% | ? 70.1% | ?? 67.3% |
+| **Hotspot Detection** | ? DBSCAN | ?? Grid-based | ?? Basic | ? Advanced | ?? Manual |
+| **Route Optimization** | ? OR-Tools VRP | ? No | ?? Basic | ? Yes | ? No |
+| **Geospatial Analytics** | ? Mapbox | ?? Google Maps | ? Advanced | ? Advanced | ?? Limited |
+| **Real-Time API** | ? FastAPI | ?? REST only | ? Yes | ? Yes | ? No |
+| **Multi-Agency Fusion** | ? Yes | ? No | ?? Limited | ? Yes | ?? Manual |
+| **Self-Hosted Option** | ? Yes | ? No | ? No | ? No | ?? Enterprise only |
+| **Open Source Core** | ? MIT License | ? Proprietary | ? Proprietary | ? Proprietary | ? Proprietary |
 | **Starting Price** | **Free** (self-hosted) | $200K/year | $150K/year | $180K/year | $100K/year |
 | **Enterprise Price** | $150K/year | $500K+/year | $400K+/year | $450K+/year | $300K+/year |
 
 **Legend:**
-- ✅ Fully supported
-- ⚠️ Partially supported
-- 🔄 Coming soon
-- ❌ Not available
-- 💰 Additional cost
+- ? Fully supported
+- ?? Partially supported
+- ?? Coming soon
+- ? Not available
+- ?? Additional cost
 
 **Data Sources:** Public documentation, G2 reviews, Gartner reports (as of Jan 2025)
 
 ---
 
-## 📚 Documentation
+## ?? Documentation
 
 - **[Architecture Documentation](./docs/ARCHITECTURE.md)** - System architecture, data flow, and deployment
 - **[Competitive Analysis](./docs/COMPETITIVE_ANALYSIS.md)** - Comparison with enterprise solutions
@@ -596,8 +596,8 @@ See `.cursorrules` for complete Guardian Fraud Detection System rules.
 - **[Docker Guide](./docs/DOCKER_GUIDE.md)** - Docker setup and deployment instructions
 - **[Blog Post](./docs/BLOG_POST_CRIME_PREDICTION.md)** - Technical blog: Multi-Agency Crime Prediction
 
-**📖 [Skills Mapping & Metrics Summary](../SKILLS_MAPPING_METRICS_SUMMARY.md)** - Skills demonstrated across portfolio  
-**📖 [Interview Preparation Guide](../INTERVIEW_PREPARATION_TALKING_POINTS.md)** - Interview talking points and answers
+**?? [Skills Mapping & Metrics Summary](../SKILLS_MAPPING_METRICS_SUMMARY.md)** - Skills demonstrated across portfolio  
+**?? [Interview Preparation Guide](../INTERVIEW_PREPARATION_TALKING_POINTS.md)** - Interview talking points and answers
 
 ---
 
