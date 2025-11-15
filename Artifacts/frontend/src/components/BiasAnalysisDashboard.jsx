@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { apiPath } from '../config/api.js';
 import {
   BarChart, Bar, LineChart, Line, RadarChart, Radar, PolarGrid,
   PolarAngleAxis, PolarRadiusAxis, XAxis, YAxis, CartesianGrid,
@@ -54,8 +55,8 @@ export default function BiasAnalysisDashboard() {
     setLoading(true);
     try {
       const [analysis, interventionData] = await Promise.all([
-        axios.get('http://localhost:8000/api/bias/analysis'),
-        axios.get('http://localhost:8000/api/bias/interventions')
+        axios.get(apiPath('bias/analysis')),
+        axios.get(apiPath('bias/interventions'))
       ]);
       
       setAnalysisData(analysis.data);

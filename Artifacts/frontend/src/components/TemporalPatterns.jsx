@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { apiPath } from '../config/api.js';
 import {
   LineChart, Line, BarChart, Bar, AreaChart, Area, ComposedChart,
   XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer
@@ -30,13 +31,13 @@ export default function TemporalPatterns() {
     setLoading(true);
     try {
       const [analysis, forecast, anomalies] = await Promise.all([
-        axios.get('http://localhost:8000/api/temporal/analysis', {
+        axios.get(apiPath('temporal/analysis'), {
           params: { crime_type: crimeType, location }
         }),
-        axios.get('http://localhost:8000/api/temporal/forecast', {
+        axios.get(apiPath('temporal/forecast'), {
           params: { crime_type: crimeType, location, forecast_days: 7 }
         }),
-        axios.get('http://localhost:8000/api/temporal/anomalies')
+        axios.get(apiPath('temporal/anomalies'))
       ]);
       
       setAnalysisData(analysis.data);
