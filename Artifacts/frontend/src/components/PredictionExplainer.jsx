@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { apiPath, API_BASE } from '../config/api.js';
 import {
   BarChart, Bar, LineChart, Line, XAxis, YAxis, CartesianGrid,
   Tooltip, Legend, ResponsiveContainer, Cell, ReferenceLine
@@ -59,7 +60,7 @@ export default function PredictionExplainer() {
     
     // First check if backend is reachable
     try {
-      await axios.get('http://localhost:8000/health', { timeout: 3000 });
+      await axios.get(`${API_BASE}/health`, { timeout: 3000 });
     } catch (healthError) {
       setLoading(false);
       setError(
@@ -73,12 +74,12 @@ export default function PredictionExplainer() {
       const axiosConfig = { timeout: 10000 }; // 10 second timeout
       
       const [explainRes, importanceRes, timelineRes] = await Promise.all([
-        axios.get('http://localhost:8000/api/explainability/explain-prediction', {
+        axios.get(apiPath('explainability/explain-prediction'), {
           params: { location_id: locationId },
           ...axiosConfig
         }),
-        axios.get('http://localhost:8000/api/explainability/global-importance', axiosConfig),
-        axios.get('http://localhost:8000/api/explainability/prediction-timeline', {
+        axios.get(apiPath('explainability/global-importance'), axiosConfig),
+        axios.get(apiPath('explainability/prediction-timeline'), {
           params: { location_id: locationId },
           ...axiosConfig
         })
@@ -90,7 +91,7 @@ export default function PredictionExplainer() {
 
       // Fetch confidence breakdown
       const confidenceRes = await axios.get(
-        'http://localhost:8000/api/explainability/confidence-breakdown',
+        apiPath('explainability/confidence-breakdown'),
         { 
           params: { prediction_id: explainRes.data.prediction_id },
           ...axiosConfig
@@ -100,7 +101,7 @@ export default function PredictionExplainer() {
 
       // Fetch summary
       const summaryRes = await axios.get(
-        'http://localhost:8000/api/explainability/explanation-summary',
+        apiPath('explainability/explanation-summary'),
         { 
           params: { prediction_id: explainRes.data.prediction_id },
           ...axiosConfig
@@ -115,13 +116,13 @@ export default function PredictionExplainer() {
       if (error.code === 'ECONNABORTED') {
         errorMessage += 'Request timed out. Backend may be slow or not responding.';
       } else if (error.code === 'ERR_NETWORK' || error.message.includes('Network Error')) {
-        errorMessage += 'Network error. Backend server may not be running on http://localhost:8000';
+        errorMessage += 'Network error. Backend server may not be running.';
       } else if (error.response) {
         errorMessage += `API Error: ${error.response.status} - ${error.response.statusText}`;
       } else if (error.message) {
         errorMessage += `Error: ${error.message}`;
       } else {
-        errorMessage += 'Please ensure the backend server is running on http://localhost:8000';
+        errorMessage += 'Please ensure the backend server is running.';
       }
       
       setError(errorMessage);
@@ -133,7 +134,7 @@ export default function PredictionExplainer() {
   const runWhatIfScenario = async () => {
     try {
       const response = await axios.post(
-        'http://localhost:8000/api/explainability/what-if',
+        apiPath('explainability/what-if'),
         null,
         {
           params: {
@@ -176,8 +177,8 @@ export default function PredictionExplainer() {
               <div className="space-y-2">
                 <p className="text-sm font-semibold text-red-900 dark:text-red-200">Troubleshooting Steps:</p>
                 <ul className="list-disc list-inside space-y-1 text-sm text-red-800 dark:text-red-300">
-                  <li>Ensure the backend server is running on port 8000</li>
-                  <li>Check if the API endpoint is accessible: <code className="bg-red-100 dark:bg-red-900/30 px-1 rounded">http://localhost:8000/api/explainability/explain-prediction</code></li>
+                  <li>Ensure the backend server is running</li>
+                  <li>Check if the API endpoint is accessible</li>
                   <li>Verify CORS settings allow requests from the frontend</li>
                   <li>Check browser console for detailed error messages</li>
                 </ul>

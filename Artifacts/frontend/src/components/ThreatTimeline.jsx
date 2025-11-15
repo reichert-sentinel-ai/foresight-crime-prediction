@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import axios from 'axios';
+import { apiPath } from '../config/api.js';
 import {
   ScatterChart, Scatter, LineChart, Line, BarChart, Bar,
   XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer,
@@ -67,7 +68,7 @@ export default function ThreatTimeline() {
         ...(eventTypeFilter !== 'all' && { event_type: eventTypeFilter })
       };
 
-      const response = await axios.get('http://localhost:8000/api/threat-timeline/events', { params });
+      const response = await axios.get(apiPath('threat-timeline/events'), { params });
       if (response.data && response.data.events) {
         setTimelineData(response.data);
       } else {
@@ -99,7 +100,7 @@ export default function ThreatTimeline() {
 
   const fetchAttackChain = async (campaignId) => {
     try {
-      const response = await axios.get(`http://localhost:8000/api/threat-timeline/attack-chain/${campaignId}`);
+      const response = await axios.get(apiPath(`threat-timeline/attack-chain/${campaignId}`));
       setAttackChain(response.data);
     } catch (error) {
       console.error('Error fetching attack chain:', error);
@@ -108,7 +109,7 @@ export default function ThreatTimeline() {
 
   const viewEventDetails = async (eventId) => {
     try {
-      const response = await axios.get(`http://localhost:8000/api/threat-timeline/event-details/${eventId}`);
+      const response = await axios.get(apiPath(`threat-timeline/event-details/${eventId}`));
       setSelectedEvent(response.data);
     } catch (error) {
       console.error('Error fetching event details:', error);
@@ -155,7 +156,7 @@ export default function ThreatTimeline() {
           <Alert className="border-red-200 bg-red-50">
             <AlertDescription className="text-red-800">
               <strong>Error:</strong> {error}<br />
-              Please check if the backend server is running on port 8000.
+              Please check if the backend server is running.
             </AlertDescription>
           </Alert>
         </div>
