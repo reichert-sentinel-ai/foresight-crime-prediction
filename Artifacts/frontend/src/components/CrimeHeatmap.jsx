@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { MapContainer, TileLayer, Circle, Popup, useMap } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import axios from 'axios';
+import { apiPath } from '../config/api.js';
 import L from 'leaflet';
 import { Card, CardHeader, CardTitle, CardContent } from './ui/card';
 import { Select, SelectItem } from './ui/select';
@@ -126,7 +127,7 @@ export default function CrimeHeatmap() {
     setLoading(true);
     setError(null);
     try {
-      const response = await axios.get('/api/crime-map/hotspots', {
+      const response = await axios.get(apiPath('crime-map/hotspots'), {
         params: { city, crime_type: crimeType, time_window: timeWindow }
       });
       setHeatmapData(response.data);
