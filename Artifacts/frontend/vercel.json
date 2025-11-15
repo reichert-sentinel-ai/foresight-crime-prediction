@@ -1,8 +1,8 @@
 {
-  "buildCommand": "chmod +x node_modules/.bin/vite && npm run build",
+  "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "framework": "vite",
-  "installCommand": "npm ci --include=dev || npm install --include=dev",
+  "installCommand": "rm -rf node_modules package-lock.json && npm install --include=dev",
   "devCommand": "npm run dev",
   "rewrites": [
     {
