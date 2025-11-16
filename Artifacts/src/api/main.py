@@ -10,7 +10,7 @@ Provides REST API endpoints for:
 
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from typing import Optional, List, Dict
+from typing import Optional, List, Dict, Any
 from datetime import datetime, timedelta
 import logging
 
@@ -112,7 +112,7 @@ class HotspotResponse(BaseModel):
 
 
 class RouteRequest(BaseModel):
-    hotspots: List[Dict]
+    hotspots: List[Dict[str, Any]]  # List of hotspot dictionaries
     num_officers: int
     depot_latitude: float
     depot_longitude: float
