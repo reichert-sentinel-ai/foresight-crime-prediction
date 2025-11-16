@@ -61,11 +61,10 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "https://foresight-crime-prediction.vercel.app",
-        "https://foresight-crime-prediction-*.vercel.app",  # Preview deployments
         "http://localhost:5174",  # Local frontend dev server
         "http://localhost:5173",  # Alternative local port
-        "*"  # Allow all for now - restrict in production if needed
     ],
+    allow_origin_regex=r"https://foresight-crime-prediction-.*\.vercel\.app",  # Preview deployments
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
