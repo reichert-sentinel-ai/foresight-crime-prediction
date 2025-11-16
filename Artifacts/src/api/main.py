@@ -56,10 +56,16 @@ app = FastAPI(
     version="1.0.0"
 )
 
-# CORS middleware
+# CORS middleware - allow Vercel deployments and local development
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Configure for production
+    allow_origins=[
+        "https://foresight-crime-prediction.vercel.app",
+        "https://foresight-crime-prediction-*.vercel.app",  # Preview deployments
+        "http://localhost:5174",  # Local frontend dev server
+        "http://localhost:5173",  # Alternative local port
+        "*"  # Allow all for now - restrict in production if needed
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
