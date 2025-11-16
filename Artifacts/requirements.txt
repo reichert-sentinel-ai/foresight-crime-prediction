@@ -1,5 +1,5 @@
 # Core Dependencies
-python>=3.11
+# Note: Python version is determined by the Docker base image (python:3.11-slim)
 pandas>=2.0.0
 numpy>=1.24.0
 
