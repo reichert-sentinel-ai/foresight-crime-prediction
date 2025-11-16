@@ -28,5 +28,6 @@ ENV PYTHONUNBUFFERED=1
 ENV PYTHONPATH=/app
 
 # Default command (can be overridden)
-CMD ["uvicorn", "src.api.main:app", "--host", "0.0.0.0", "--port", "8000"]
+# Use PORT env var if available (for Render), otherwise default to 8000
+CMD uvicorn src.api.main:app --host 0.0.0.0 --port ${PORT:-8000}
 
